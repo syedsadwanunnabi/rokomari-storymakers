@@ -33,6 +33,67 @@ const skillOptions = [
   { label: "Event Management", icon: CalendarDays },
 ];
 
+const departmentOptions = [
+  "Architecture (Arch)",
+  "Biomedical Engineering (BME)",
+  "Chemical Engineering (ChE)",
+  "Chemistry (CHEM)",
+  "Civil Engineering (CE)",
+  "Computer Science and Engineering (CSE)",
+  "Electrical and Electronic Engineering (EEE)",
+  "Humanities (HUM)",
+  "Industrial and Production Engineering (IPE)",
+  "Materials and Metallurgical Engineering (MME)",
+  "Mathematics (MATH)",
+  "Mechanical Engineering (ME)",
+  "Nanomaterials and Ceramic Engineering (NCE)",
+  "Naval Architecture and Marine Engineering (NAME)",
+  "Petroleum and Mineral Resources Engineering (PMRE)",
+  "Physics (PHYS)",
+  "Urban and Regional Planning (URP)",
+  "Water Resources Engineering (WRE)",
+  "Botany & Zoology",
+  "Biochemistry and Molecular Biology",
+  "Psychology & Clinical Psychology",
+  "Microbiology",
+  "Fisheries",
+  "Genetic Engineering and Biotechnology",
+  "Public Health",
+  "Geography, Environment & Geology",
+  "Disaster Science, Climate Resilience & Meteorology",
+  "Oceanography",
+  "Soil, Water & Environment",
+  "Pharmacy",
+  "Bengali Language and Literature",
+  "English Language and Literature",
+  "Foreign Languages (Arabic, Persian, Urdu, etc.)",
+  "History and Philosophy",
+  "Islamic Studies",
+  "Fine Arts (Drawing, Graphic Design, Sculpture)",
+  "Performing Arts (Theatre, Music, Dance)",
+  "World Religions and Culture",
+  "Economics",
+  "Political Science",
+  "Sociology & Anthropology",
+  "Mass Communication & Journalism",
+  "Public Administration",
+  "Peace and Conflict Studies",
+  "Women and Gender Studies",
+  "Development Studies",
+  "Television, Film and Photography",
+  "Criminology",
+  "Law",
+  "Management",
+  "Accounting",
+  "Marketing",
+  "Finance",
+  "Banking and Insurance",
+  "Management Information Systems (MIS)",
+  "Tourism and Hospitality Management",
+  "Organization Strategy and Leadership",
+  "Applied Statistics",
+];
+
 const benefits = [
   {
     index: "01",
@@ -399,7 +460,9 @@ export default function Home() {
                       <Field label="University" name="university" value={form.university} onChange={updateForm} required>
                         <div className="select-wrap"><select id="university" name="university" value={form.university} onChange={updateForm} required className="field-control"><option value="">Select your university</option><option>University of Dhaka (DU)</option><option>Institute of Business Administration, University of Dhaka</option><option>Bangladesh University of Engineering and Technology (BUET)</option><option>Jahangirnagar University (JU)</option><option>Jagannath University (JnU)</option><option>University of Rajshahi (RU)</option><option>Chittagong University (CU)</option><option>Bangladesh Agricultural University (BAU)</option><option>Shahjalal University of Science and Technology (SUST)</option><option>Khulna University of Engineering &amp; Technology (KUET)</option><option>Chittagong University of Engineering &amp; Technology (CUET)</option><option>Rajshahi University of Engineering &amp; Technology (RUET)</option><option>Khulna University (KU)</option><option>Bangladesh University of Professionals (BUP)</option><option>North South University (NSU)</option><option>BRAC University (BRACU)</option><option>Independent University, Bangladesh (IUB)</option><option>Ahsanullah University of Science and Technology (AUST)</option><option>East West University (EWU)</option><option>United International University (UIU)</option><option>University of Liberal Arts Bangladesh (ULAB)</option><option>Daffodil International University (DIU)</option></select><ChevronDown size={17} /></div>
                       </Field>
-                      <Field label="Department or major" name="department" placeholder="e.g. Marketing" value={form.department} onChange={updateForm} required />
+                      <Field label="Department or major" name="department" value={form.department} onChange={updateForm} required>
+                        <div className="select-wrap"><select id="department" name="department" value={form.department} onChange={updateForm} required className="field-control"><option value="">Select your department or major</option>{departmentOptions.map((department) => <option key={department}>{department}</option>)}</select><ChevronDown size={17} /></div>
+                      </Field>
                       <Field label="Current year" name="currentYear" value={form.currentYear} onChange={updateForm} required>
                         <div className="select-wrap"><select id="currentYear" name="currentYear" value={form.currentYear} onChange={updateForm} required className="field-control"><option value="">Select your year</option><option>Freshman</option><option>Sophomore</option><option>Junior</option><option>Senior</option></select><ChevronDown size={17} /></div>
                       </Field>
