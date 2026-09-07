@@ -2,7 +2,6 @@ import { FormEvent, useMemo, useState } from "react";
 import {
   ArrowDown,
   ArrowUpRight,
-  BookOpen,
   CalendarDays,
   Check,
   CheckCircle2,
@@ -19,10 +18,7 @@ import {
   PenLine,
   Send,
   Sparkles,
-  Trophy,
-  UsersRound,
   Video,
-  WalletCards,
   X,
 } from "lucide-react";
 
@@ -42,28 +38,24 @@ const benefits = [
     index: "01",
     title: "Earn as you influence",
     text: "Turn your campus network into a real growth channel with affiliate commissions on every successful order.",
-    icon: WalletCards,
     tone: "orange",
   },
   {
     index: "02",
     title: "Read more, for free",
     text: "Get selected titles delivered to your reading list, so your next recommendation comes from experience.",
-    icon: BookOpen,
     tone: "blue",
   },
   {
     index: "03",
     title: "Make it official",
     text: "Leave with an exclusive certificate and a body of campaign work you can take into your next opportunity.",
-    icon: Trophy,
     tone: "blue",
   },
   {
     index: "04",
     title: "Meet your people",
     text: "Connect with an ambitious community of creators, organisers and future marketing leaders across Bangladesh.",
-    icon: UsersRound,
     tone: "orange",
   },
 ];
@@ -242,7 +234,7 @@ export default function Home() {
           <a href="#top" className="brand" aria-label="Rokomari StoryMakers home">
             <LogoMark />
             <span>
-              <strong>rokomari</strong>
+              <strong className="brand-bangla">রকমারি</strong>
               <small>storymakers</small>
             </span>
           </a>
@@ -342,10 +334,9 @@ export default function Home() {
             </div>
             <div className="benefits-grid">
               {benefits.map((benefit) => {
-                const Icon = benefit.icon;
                 return (
                   <article className={`benefit-card benefit-${benefit.tone}`} key={benefit.index}>
-                    <div className="benefit-top"><span>{benefit.index}</span><Icon size={24} strokeWidth={1.7} /></div>
+                    <div className="benefit-top"><span>{benefit.index}</span><span className="benefit-rule" /></div>
                     <div><h3>{benefit.title}</h3><p>{benefit.text}</p></div>
                     <ArrowUpRight className="card-arrow" size={19} />
                   </article>
@@ -406,7 +397,7 @@ export default function Home() {
                     <div className="form-section-heading"><span>02</span><div><h3>Academic profile</h3><p>Where are you learning and leading?</p></div></div>
                     <div className="field-grid field-grid-two">
                       <Field label="University" name="university" value={form.university} onChange={updateForm} required>
-                        <div className="select-wrap"><select id="university" name="university" value={form.university} onChange={updateForm} required className="field-control"><option value="">Select your university</option><option>Dhaka University</option><option>BRAC</option><option>NSU</option><option>BUP</option><option>IBA</option><option>Other</option></select><ChevronDown size={17} /></div>
+                        <div className="select-wrap"><select id="university" name="university" value={form.university} onChange={updateForm} required className="field-control"><option value="">Select your university</option><option>University of Dhaka (DU)</option><option>Institute of Business Administration, University of Dhaka</option><option>Bangladesh University of Engineering and Technology (BUET)</option><option>Jahangirnagar University (JU)</option><option>Jagannath University (JnU)</option><option>University of Rajshahi (RU)</option><option>Chittagong University (CU)</option><option>Bangladesh Agricultural University (BAU)</option><option>Shahjalal University of Science and Technology (SUST)</option><option>Khulna University of Engineering &amp; Technology (KUET)</option><option>Chittagong University of Engineering &amp; Technology (CUET)</option><option>Rajshahi University of Engineering &amp; Technology (RUET)</option><option>Khulna University (KU)</option><option>Bangladesh University of Professionals (BUP)</option><option>North South University (NSU)</option><option>BRAC University (BRACU)</option><option>Independent University, Bangladesh (IUB)</option><option>Ahsanullah University of Science and Technology (AUST)</option><option>East West University (EWU)</option><option>United International University (UIU)</option><option>University of Liberal Arts Bangladesh (ULAB)</option><option>Daffodil International University (DIU)</option></select><ChevronDown size={17} /></div>
                       </Field>
                       <Field label="Department or major" name="department" placeholder="e.g. Marketing" value={form.department} onChange={updateForm} required />
                       <Field label="Current year" name="currentYear" value={form.currentYear} onChange={updateForm} required>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Noto+Serif+Bengali:wght@600;700;800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -44,6 +44,7 @@ button:not(:disabled), a { cursor: pointer; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: white; min-width: 155px; }
 .brand > span:last-child { display: grid; gap: 0; line-height: 1; }
 .brand strong { font-size: 17px; letter-spacing: -0.07em; font-weight: 800; }
+.brand .brand-bangla { font-family: 'Noto Serif Bengali', serif; font-size: 18px; line-height: .9; letter-spacing: -.08em; font-weight: 800; font-style: italic; transform: skewX(-8deg); transform-origin: left center; }
 .brand small { margin-top: 5px; color: #9fb9ed; font-size: 8px; text-transform: uppercase; letter-spacing: .2em; font-weight: 700; }
 .logo-mark { position: relative; display: inline-flex; align-items: center; width: 26px; height: 25px; transform: skewY(-10deg); }
 .logo-mark span { display: block; width: 12px; height: 19px; border: 2px solid currentColor; border-radius: 2px 5px 2px 2px; }
@@ -131,15 +132,15 @@ h1 span { color: var(--orange); }
 .section-heading h2, .role-intro h2, .apply-aside h2 { margin-top: 19px; color: var(--navy); font-size: clamp(2.8rem, 4.5vw, 4.35rem); line-height: .95; letter-spacing: -.09em; font-weight: 800; }
 .section-heading h2 em, .role-intro h2 em, .apply-aside h2 em, .success-state h2 em { color: var(--orange); font-family: Georgia, 'Noto Sans Bengali', serif; font-weight: 400; letter-spacing: -.08em; }
 .benefits-heading > p { max-width: 330px; margin-top: 18px; color: var(--muted); font-size: 13px; line-height: 1.8; }
-.benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; margin-top: 73px; }
+.benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; margin-top: 73px; align-items: stretch; }
 .benefit-card { position: relative; min-height: 292px; display: flex; flex-direction: column; justify-content: space-between; padding: 23px; border: 1px solid #e2e7ef; background: white; transition: transform 220ms var(--ease-out), box-shadow 220ms ease; }
 .benefit-card:hover { transform: translateY(-7px); box-shadow: 0 18px 36px rgba(17, 41, 80, .1); }
 .benef-orange { background: var(--orange); border-color: var(--orange); color: white; }
 .benefit-blue { background: var(--blue); border-color: var(--blue); color: white; }
 .benefit-top { display: flex; align-items: flex-start; justify-content: space-between; }
 .benefit-top span { font-family: 'DM Mono', monospace; font-size: 10px; opacity: .65; }
-.benefit-top svg { opacity: .85; }
-.benefit-card h3 { max-width: 180px; margin-bottom: 11px; font-size: 19px; line-height: 1.05; letter-spacing: -.055em; }
+.benefit-rule { display: block; width: 27px; height: 2px; margin-top: 5px; background: currentColor; opacity: .65; }
+.benefit-card h3 { max-width: 180px; min-height: 40px; margin-bottom: 11px; font-size: 19px; line-height: 1.05; letter-spacing: -.055em; }
 .benefit-card p { max-width: 210px; color: #c3d6fc; font-size: 11px; line-height: 1.7; }
 .benef-orange p { color: #fff0e7; }
 .card-arrow { align-self: flex-end; opacity: .75; transition: transform 180ms ease; }
@@ -264,7 +265,7 @@ textarea.field-control { height: auto; min-height: 108px; padding-top: 12px; res
   .benefits-heading > p { margin-top: 27px; }
   .benefits-grid { grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 45px; }
   .benefit-card { min-height: 252px; padding: 16px; }
-  .benefit-card h3 { font-size: 16px; }
+  .benefit-card h3 { min-height: 34px; font-size: 16px; }
   .benefit-card p { font-size: 10px; }
   .role-layout { grid-template-columns: 1fr; gap: 53px; }
   .role-stamp { margin-top: 35px; }
