@@ -156,7 +156,7 @@ const initialForm = {
 type FormState = typeof initialForm;
 
 function LogoMark() {
-  return <img className="storymakers-logo" src="/storymakers-logo.png" alt="StoryMakers by Rokomari" />;
+  return <img className="storymakers-logo" src="/storymakers-logo-transparent.png" alt="StoryMakers by Rokomari" />;
 }
 
 function SectionLabel({ children, light = false }: { children: string; light?: boolean }) {
@@ -344,6 +344,9 @@ export default function Home() {
             <div className="hero-visual" aria-label="A visual collage representing books, campus community and creative work">
               <div className="visual-orbit orbit-one" />
               <div className="visual-orbit orbit-two" />
+              <div className="hero-logo-panel">
+                <img className="hero-logo" src="/storymakers-logo-transparent.png" alt="StoryMakers by Rokomari" />
+              </div>
               <div className="visual-card card-note">
                 <span className="card-kicker">Your brief</span>
                 <strong>Make reading<br />feel social.</strong>
