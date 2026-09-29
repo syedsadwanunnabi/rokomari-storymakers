@@ -156,7 +156,7 @@ const initialForm = {
 type FormState = typeof initialForm;
 
 function LogoMark() {
-  return <img className="storymakers-logo" src="/storymakers-logo-transparent.png" alt="StoryMakers by Rokomari" />;
+  return <img className="storymakers-logo" src="/storymakers-logo-new.png" alt="StoryMakers by Rokomari" />;
 }
 
 function SectionLabel({ children, light = false }: { children: string; light?: boolean }) {
@@ -323,7 +323,11 @@ export default function Home() {
           <div className="container hero-content">
             <div className="hero-copy">
               <div className="eyebrow-pill"><Sparkles size={14} /> Campus ambassador programme · 2025</div>
-              <h1>Make your campus <span>impossible</span> to ignore.</h1>
+              <h1 className="hero-title">Become a</h1>
+              <div className="hero-brand-lockup">
+                <img src="/storymakers-logo-new.png" alt="StoryMakers by Rokomari" />
+              </div>
+              <p className="hero-positioning">Make your campus <span>impossible</span> to ignore.</p>
               <p className="hero-lede">
                 StoryMakers is where student leaders turn ideas into influence, campaigns into community and every good story into momentum.
               </p>
@@ -344,9 +348,6 @@ export default function Home() {
             <div className="hero-visual" aria-label="A visual collage representing books, campus community and creative work">
               <div className="visual-orbit orbit-one" />
               <div className="visual-orbit orbit-two" />
-              <div className="hero-logo-panel">
-                <img className="hero-logo" src="/storymakers-logo-transparent.png" alt="StoryMakers by Rokomari" />
-              </div>
               <div className="visual-card card-note">
                 <span className="card-kicker">Your brief</span>
                 <strong>Make reading<br />feel social.</strong>

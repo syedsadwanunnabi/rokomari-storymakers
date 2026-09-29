@@ -68,6 +68,11 @@ button:not(:disabled), a { cursor: pointer; }
 h1, h2, h3, p { margin: 0; }
 h1 { max-width: 650px; font-size: clamp(3.45rem, 6.3vw, 6.35rem); line-height: .95; letter-spacing: -.09em; font-weight: 800; }
 h1 span { color: var(--orange); }
+.hero-title { margin-bottom: 12px; }
+.hero-brand-lockup { display: flex; align-items: center; width: min(100%, 525px); min-height: 142px; padding: 11px 20px; border: 1px solid rgba(255,255,255,.3); border-radius: 5px; background: #fffdf7; box-shadow: 0 18px 40px rgba(1,10,28,.25); }
+.hero-brand-lockup img { display: block; width: 100%; height: auto; max-height: 128px; object-fit: contain; }
+.hero-positioning { max-width: 520px; margin-top: 20px; color: white; font-size: clamp(1.7rem, 3vw, 2.45rem); line-height: 1.05; letter-spacing: -.07em; font-weight: 800; }
+.hero-positioning span { color: var(--orange); }
 .hero-lede { max-width: 510px; margin-top: 28px; color: #b4c6e8; font-size: 15px; line-height: 1.8; }
 .hero-actions { display: flex; align-items: center; gap: 26px; margin-top: 34px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 20px; border-radius: 4px; font-size: 12px; font-weight: 800; letter-spacing: .01em; transition: transform 160ms var(--ease-out), box-shadow 160ms ease, background 160ms ease; }
@@ -88,8 +93,6 @@ h1 span { color: var(--orange); }
 .avatar-stack span:nth-child(4) { background: var(--orange); color: white; }
 
 .hero-visual { position: relative; min-height: 450px; }
-.hero-logo-panel { position: absolute; z-index: 3; top: 154px; left: 4px; display: grid; place-items: center; width: 515px; height: 176px; padding: 12px 16px; border: 1px solid rgba(7,26,58,.08); background: #fffdf7; box-shadow: 18px 22px 42px rgba(2, 13, 34, .24); transform: rotate(-3deg); }
-.hero-logo { display: block; width: 100%; height: auto; max-height: 150px; object-fit: contain; }
 .visual-orbit { position: absolute; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; transform: rotate(-18deg); }
 .orbit-one { width: 510px; height: 235px; top: 96px; left: -16px; }
 .orbit-two { width: 440px; height: 220px; top: 104px; left: 10px; transform: rotate(62deg); border-color: rgba(255,113,51,.32); }
@@ -257,7 +260,7 @@ textarea.field-control { height: auto; min-height: 108px; padding-top: 12px; res
   .hero-lede { font-size: 13px; }
   .hero-footnote { margin-top: 42px; }
   .hero-visual { min-height: 390px; width: 100%; margin: 0; transform: scale(.85); transform-origin: top center; }
-  .hero-logo-panel { top: 140px; left: 50%; width: 515px; transform: translateX(-50%) rotate(-3deg); }
+  .hero-brand-lockup { width: min(100%, 525px); }
   .hero-metrics { grid-template-columns: repeat(3, 1fr); gap: 12px; padding-top: 15px; padding-bottom: 19px; }
   .hero-metrics > div:not(.metrics-note) { display: block; }
   .hero-metrics strong { display: block; font-size: 23px; }
@@ -291,7 +294,7 @@ textarea.field-control { height: auto; min-height: 108px; padding-top: 12px; res
   .benefits-grid { grid-template-columns: 1fr; }
   .benefit-card { min-height: 210px; }
   .hero-visual { margin-left: -25px; width: calc(100% + 50px); transform: scale(.74); transform-origin: top center; min-height: 350px; }
-  .hero-logo-panel { width: 465px; height: 158px; }
+  .hero-brand-lockup { min-height: 105px; padding: 8px 14px; }
   .hero-metrics { gap: 9px; }
   .hero-metrics strong { font-size: 20px; }
   .success-state h2 { font-size: 47px; }
