@@ -156,12 +156,7 @@ const initialForm = {
 type FormState = typeof initialForm;
 
 function LogoMark() {
-  return (
-    <span className="logo-mark" aria-hidden="true">
-      <span />
-      <span />
-    </span>
-  );
+  return <img className="storymakers-logo" src="/manus-storage/storymakers-logo_ed5f65b9.png" alt="StoryMakers by Rokomari" />;
 }
 
 function SectionLabel({ children, light = false }: { children: string; light?: boolean }) {
@@ -294,10 +289,6 @@ export default function Home() {
         <div className="nav-wrap">
           <a href="#top" className="brand" aria-label="Rokomari StoryMakers home">
             <LogoMark />
-            <span>
-              <strong className="brand-bangla">রকমারি</strong>
-              <small>storymakers</small>
-            </span>
           </a>
           <nav className="desktop-nav" aria-label="Primary navigation">
             <a href="#why">Why join</a>
@@ -513,7 +504,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="container footer-inner">
-          <a href="#top" className="brand footer-brand"><LogoMark /><span><strong>rokomari</strong><small>storymakers</small></span></a>
+          <a href="#top" className="brand footer-brand"><LogoMark /></a>
           <p>For the readers, makers and movers.</p>
           <a href="#apply" className="footer-link">Become a StoryMaker <ArrowUpRight size={15} /></a>
         </div>

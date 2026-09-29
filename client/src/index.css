@@ -42,6 +42,7 @@ button:not(:disabled), a { cursor: pointer; }
 .site-header { position: absolute; inset: 0 0 auto; z-index: 10; color: white; }
 .nav-wrap { max-width: 1240px; margin: 0 auto; padding: 26px 32px; display: flex; align-items: center; gap: 44px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: white; min-width: 155px; }
+.storymakers-logo { display: block; width: 154px; height: 50px; padding: 5px 8px; object-fit: contain; object-position: center; border-radius: 3px; background: white; }
 .brand > span:last-child { display: grid; gap: 0; line-height: 1; }
 .brand strong { font-size: 17px; letter-spacing: -0.07em; font-weight: 800; }
 .brand .brand-bangla { font-family: 'Noto Serif Bengali', serif; font-size: 18px; line-height: .9; letter-spacing: -.08em; font-weight: 800; font-style: italic; transform: skewX(-8deg); transform-origin: left center; }
@@ -241,6 +242,7 @@ textarea.field-control { height: auto; min-height: 108px; padding-top: 12px; res
 @media (max-width: 760px) {
   .container { padding: 0 20px; }
   .nav-wrap { padding: 20px; }
+  .storymakers-logo { width: 126px; height: 41px; padding: 4px 6px; }
   .desktop-nav, .nav-cta { display: none; }
   .mobile-menu-button { display: grid; place-items: center; margin-left: auto; width: 40px; height: 40px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.08); color: white; }
   .mobile-nav { display: grid; gap: 3px; padding: 10px 20px 20px; background: var(--navy); border-top: 1px solid rgba(255,255,255,.1); }
