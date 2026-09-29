@@ -156,7 +156,7 @@ const initialForm = {
 type FormState = typeof initialForm;
 
 function LogoMark() {
-  return <img className="storymakers-logo" src="/manus-storage/storymakers-logo_ed5f65b9.png" alt="StoryMakers by Rokomari" />;
+  return <img className="storymakers-logo" src="/storymakers-logo.png" alt="StoryMakers by Rokomari" />;
 }
 
 function SectionLabel({ children, light = false }: { children: string; light?: boolean }) {
